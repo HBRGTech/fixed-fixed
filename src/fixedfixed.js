@@ -47,7 +47,9 @@
 		// Opera Mini
 		!( w.operamini && ({}).toString.call( w.operamini ) === "[object OperaMini]" ) ||
 		// Firefox Mobile less than version 6
-		!( ua.match( /Fennec\/([0-9]+)/ ) && RegExp.$1 < 6 )
+		!( ua.match( /Fennec\/([0-9]+)/ ) && RegExp.$1 < 6 ) ||
+		// iOS 8 
+		!( ua.match( /iPad; CPU OS 8|iPhone; CPU OS 8/ ) && ua.indexOf("AppleWebKit") >= 0 )
 		// If necessary, add the other untestable browsers here...
 	){
 		//add the HTML class for now.
